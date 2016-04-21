@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="css/apodStyle.css">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<h3>APOD -  Astronomy Picture of the Day</h3>
+<div class="row">
+	<div class="col-md-3">
+		Data : <input type="text" class="form-control" 
+		ng-model="data" placeholder="AAAA-MM-DD">
+	</div>
+	<!-- 
+	<div class="col-md-3">
+		HD : 
+		<select ng-model="hd" class="form-control">
+			<option value="n">Não</option>					
+			<option value="s">Sim</option>	
+		</select>
+	</div>
+	-->
+	<!--
+	<div class="col-md-3">
+		API_KEY : <input type="text" class="form-control" 
+		ng-model="api_key" placeholder="Default: DEMO_KEY">
+	</div>
+	-->
+	<div class="col-md-3">
+		<button class="form-control" id="bt_buscar" ng-click="buscar()">
+		Buscar Img</button>
+	</div>
+</div>
+<div class="row" id="conteudo">
+	<div class="col-md-12">
+		<h4>{{apod.title}}</h4>
+		<p>Data: {{apod.date}} - by: {{apod.copyright}}</p>
+		<a ng-href="{{apod.hdurl}}">
+			<img class="img-responsive" ng-src="{{apod.hdurl}}" >
+		</a>
+		<p id="descricao">
+			<b>Descrição: </b> 
+			{{apod.explanation}}
+		</p>
+	</div>
+</div>

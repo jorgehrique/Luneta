@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="lunetaApp">
+<head>
+<meta charset="UTF-8">
+<title>Luneta</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />	
+	<link rel="stylesheet" href="css/indexStyle.css">
+
+	<!-- Angular -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="angular/angularApp.js"></script>
+	<script src="angular/routes/route.js"></script>
+	<script src="angular/services/service.js"></script>
+	<script src="angular/controllers/controller.js"></script>
+</head>
+<body>
+	<img id="topo" class="img-responsive" src="imgs/topo.jpg">
+	
+	<div class="container">	
+
+		<!-- Conteudo -->
+		<div ng-view></div>
+	
+	</div><!-- fim do container -->
+
+	<script src="js/jquery-2.2.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
