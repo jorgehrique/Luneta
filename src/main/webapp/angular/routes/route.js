@@ -1,4 +1,4 @@
-var url = "templates/";
+var url = "pages/";
 
 app.config(function($routeProvider){
 	$routeProvider
@@ -6,10 +6,15 @@ app.config(function($routeProvider){
 		{
 			controller : 'indexCtrl',
 			templateUrl: url + 'index.html'
-		})
+	})
 	.when('/Apod', 
 		{
 			controller : 'apodCtrl',
 			templateUrl: url + 'apod.html'
-		});
+	})
+	.when('/Other', 
+		{
+			controller : 'otherCtrl',
+			templateUrl: url + 'other.html'
+	});
 });

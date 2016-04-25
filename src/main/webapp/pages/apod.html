@@ -1,10 +1,11 @@
-<link rel="stylesheet" href="css/apodStyle.css">
-<link rel="stylesheet" href="css/bootstrap.min.css" />
-<h3>APOD -  Astronomy Picture of the Day</h3>
-<div class="row">
-	<div class="col-md-3">
-		Data : <input type="text" class="form-control" 
+<h3 id="titulo">APOD -  Astronomy Picture of the Day</h3>
+<div class="row ">
+	<div class="col-md-2 form-group">
+		<label id="labeldata" for="data">Data :</label> 
+		<input type="text" id="data" class="form-control" 
 		ng-model="data" placeholder="AAAA-MM-DD">
+		<button class="form-control" id="bt_buscar" ng-click="buscar()">
+		Buscar Img</button>
 	</div>
 	<!-- 
 	<div class="col-md-3">
@@ -21,17 +22,13 @@
 		ng-model="api_key" placeholder="Default: DEMO_KEY">
 	</div>
 	-->
-	<div class="col-md-3">
-		<button class="form-control" id="bt_buscar" ng-click="buscar()">
-		Buscar Img</button>
-	</div>
 </div>
-<div class="row" id="conteudo">
+<div class="row">
 	<div class="col-md-12">
 		<h4>{{apod.title}}</h4>
 		<p>Data: {{apod.date}} - by: {{apod.copyright}}</p>
 		<a ng-href="{{apod.hdurl}}">
-			<img class="img-responsive" ng-src="{{apod.hdurl}}" >
+			<img id="imgApod" class="img-responsive">
 		</a>
 		<p id="descricao">
 			<b>Descrição: </b> 

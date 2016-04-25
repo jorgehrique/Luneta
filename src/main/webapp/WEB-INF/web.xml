@@ -15,4 +15,14 @@
     <servlet-name>Jersey Web Application</servlet-name>
     <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description>Sample Servlet</description>
+    <display-name>LunetaServlet</display-name>
+    <servlet-name>LunetaServlet</servlet-name>
+    <servlet-class>com.example.myproject.LunetaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LunetaServlet</servlet-name>
+    <url-pattern>/luneta</url-pattern>
+  </servlet-mapping>
 </web-app>

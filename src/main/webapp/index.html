@@ -17,12 +17,17 @@
 </head>
 <body>
 	<img id="topo" class="img-responsive" src="imgs/topo.jpg">
-	
-	<div class="container">	
+		
+	<div class="container">		
+		<ul id="menu" class="nav nav-tabs">
+			<li id="home"><a href="#/">Home</a></li>
+			<li id="apod"><a href="#/Apod">Apod</a></li>	
+			<li id="other"><a href="#/Other">Other</a></li>
+		</ul>
 
-		<!-- Conteudo -->
-		<div ng-view></div>
-	
+		<div class="conteudo">
+			<div ng-view></div>
+		</div>
 	</div><!-- fim do container -->
 
 	<script src="js/jquery-2.2.2.min.js"></script>
